@@ -319,6 +319,7 @@ public class WebhookManager {
                     final HashMap<String, String> config = new HashMap<>();
                     config.put("url", url.toExternalForm());
                     config.put("content_type", "json");
+                    config.put("insecure_ssl", "1");
 
                     final Secret secret = GitHubPlugin.configuration().getHookSecretConfig().getHookSecret();
 
